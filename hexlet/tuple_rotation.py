@@ -2,6 +2,7 @@ triple = ('A', 'B', 'C')
 
 
 def rotate_left(tpl):
+    """Add function"""
     tpl = list(tpl)
     tpl[0], tpl[1], tpl[2] = tpl[1], tpl[2], tpl[0]
     print(tuple(tpl))
