@@ -9,7 +9,7 @@ def rotate_left(tpl):
 
 
 def rotate_right(tpl):
-    """Add function"""
+    """Add """
     tpl = list(tpl)
     tpl[0], tpl[1], tpl[2] = tpl[2], tpl[0], tpl[1]
     print(tuple(tpl))
