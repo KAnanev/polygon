@@ -31,4 +31,16 @@ def daily_temperatures(lst):
     return list_count
 
 
+def daily_temperatures_ver2(t):
+    days = []
+    for ind, temp in enumerate(t):
+        temp_greater = [(i, val) for i, val in enumerate(t[ind+1:], ind+1) if val > temp]
+        day = temp_greater[0][0]-ind if temp_greater else 0
+        days.append(day)
+    return days
+
+
+daily_temperatures_ver2(t)
+
+
 daily_temperatures(t)
