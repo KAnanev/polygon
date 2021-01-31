@@ -40,7 +40,7 @@ def daily_temperatures_ver2(t):
     return days
 
 
-daily_temperatures_ver2(t)
+print(daily_temperatures_ver2(t))
 
 
 daily_temperatures(t)
