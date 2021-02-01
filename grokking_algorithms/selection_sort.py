@@ -1,4 +1,5 @@
 def find_smallest(arr):
+    """Функция находит наименьший элемент в списке"""
     smallest = arr[0]
     smallest_index = 0
     for i, el in enumerate(arr[1:], start=1):
@@ -9,6 +10,7 @@ def find_smallest(arr):
 
 
 def selection_sort(arr):
+    """Функция возвращает отсортированный массив"""
     new_arr = []
     for i in range(len(arr)):
         smallest = find_smallest(arr)

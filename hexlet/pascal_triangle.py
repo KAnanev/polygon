@@ -5,7 +5,4 @@ def triangle(rows):
     return row
 
 
-
-
-
 print(triangle(5))
