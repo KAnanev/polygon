@@ -1,18 +1,19 @@
 import timeit
 
 code_to_test = """
-temp = [73, 74, 75, 71, 69, 72, 76, 73]
+from collections import defaultdict
 
 
-def daily_temperatures(t):
-    days = []
-    for ind, temp in enumerate(t):
-        temp_greater = [(i, val) for i, val in enumerate(t[ind+1:], ind+1) if val > temp]
-        day = temp_greater[0][0]-ind if temp_greater else 0
-        days.append(day)
-    return days
+def collect_indexes(items):
+    result = defaultdict(list)
+    for index, item in enumerate(items):
+        result[item].append(index)
+    return result
 
-daily_temperatures(temp)
+
+d = collect_indexes("hello")
+
+d['h']
 """
 
 elapsed_time = timeit.timeit(code_to_test, number=100)/100
